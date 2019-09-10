@@ -9,5 +9,7 @@ LABEL "repository"="https://github.com/nandogameiro/actions"
 LABEL "homepage"="https://github.com/nandogameiro/actions"
 LABEL "maintainer"="Fernando Guedes <eu@fgued.es>"
 
-ADD entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
